@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "hash",
+ "creation": "2026-10-13 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "session",
+  "clockin_log",
+  "user",
+  "col_break_1",
+  "interval_start",
+  "interval_end",
+  "duration_mins",
+  "section_activity",
+  "keystrokes",
+  "mouse_clicks",
+  "col_break_2",
+  "activity_score",
+  "monitor_count",
+  "section_integrity",
+  "nonce",
+  "signature_valid",
+  "section_shots",
+  "screenshots"
+ ],
+ "fields": [
+  {
+   "fieldname": "session",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Tracking Session",
+   "options": "Tracking Session",
+   "reqd": 1
+  },
+  {
+   "fieldname": "clockin_log",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Clockin Log",
+   "options": "Clockin Log"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "User",
+   "options": "User"
+  },
+  { "fieldname": "col_break_1", "fieldtype": "Column Break" },
+  {
+   "fieldname": "interval_start",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Interval Start"
+  },
+  {
+   "fieldname": "interval_end",
+   "fieldtype": "Datetime",
+   "label": "Interval End"
+  },
+  {
+   "fieldname": "duration_mins",
+   "fieldtype": "Float",
+   "label": "Duration (mins)",
+   "precision": "2"
+  },
+  { "fieldname": "section_activity", "fieldtype": "Section Break", "label": "Activity" },
+  {
+   "default": "0",
+   "fieldname": "keystrokes",
+   "fieldtype": "Int",
+   "label": "Keystrokes",
+   "non_negative": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "mouse_clicks",
+   "fieldtype": "Int",
+   "label": "Mouse Clicks",
+   "non_negative": 1
+  },
+  { "fieldname": "col_break_2", "fieldtype": "Column Break" },
+  {
+   "default": "0",
+   "fieldname": "activity_score",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Activity Score",
+   "non_negative": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "monitor_count",
+   "fieldtype": "Int",
+   "label": "Monitor Count",
+   "non_negative": 1
+  },
+  { "fieldname": "section_integrity", "fieldtype": "Section Break", "label": "Integrity" },
+  {
+   "fieldname": "nonce",
+   "fieldtype": "Data",
+   "label": "Nonce",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "signature_valid",
+   "fieldtype": "Check",
+   "label": "Signature Valid",
+   "read_only": 1
+  },
+  { "fieldname": "section_shots", "fieldtype": "Section Break", "label": "Screenshots" },
+  {
+   "fieldname": "screenshots",
+   "fieldtype": "Table",
+   "label": "Screenshots",
+   "options": "Interval Screenshot"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-10-13 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Metactical",
+ "name": "Activity Interval",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Employee"
+  }
+ ],
+ "sort_field": "interval_start",
+ "sort_order": "DESC",
+ "track_changes": 0
+}

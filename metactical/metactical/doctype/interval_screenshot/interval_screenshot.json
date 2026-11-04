@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-13 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "istable": 1,
+ "field_order": [
+  "monitor",
+  "image",
+  "sha256",
+  "width",
+  "height",
+  "col_break_ai",
+  "work_related",
+  "ai_label",
+  "ai_confidence"
+ ],
+ "fields": [
+  {
+   "fieldname": "monitor",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Monitor"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "in_list_view": 1,
+   "label": "Image"
+  },
+  {
+   "description": "SHA-256 of the uploaded bytes; verified server-side against the signed manifest.",
+   "fieldname": "sha256",
+   "fieldtype": "Data",
+   "label": "SHA-256"
+  },
+  {
+   "fieldname": "width",
+   "fieldtype": "Int",
+   "label": "Width"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Int",
+   "label": "Height"
+  },
+  {
+   "fieldname": "col_break_ai",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "Set by the later AI work-relevance step.",
+   "fieldname": "work_related",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Work Related"
+  },
+  {
+   "fieldname": "ai_label",
+   "fieldtype": "Data",
+   "label": "AI Label"
+  },
+  {
+   "fieldname": "ai_confidence",
+   "fieldtype": "Float",
+   "label": "AI Confidence",
+   "precision": "2"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-10-13 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Metactical",
+ "name": "Interval Screenshot",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

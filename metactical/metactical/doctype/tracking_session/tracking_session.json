@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "hash",
+ "creation": "2026-10-13 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user",
+  "clockin_log",
+  "status",
+  "window_minutes",
+  "started_on",
+  "ended_on",
+  "device",
+  "session_key"
+ ],
+ "fields": [
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "User",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "clockin_log",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Clockin Log",
+   "options": "Clockin Log"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nEnded"
+  },
+  {
+   "default": "10",
+   "fieldname": "window_minutes",
+   "fieldtype": "Int",
+   "label": "Window Minutes",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "started_on",
+   "fieldtype": "Datetime",
+   "label": "Started On"
+  },
+  {
+   "fieldname": "ended_on",
+   "fieldtype": "Datetime",
+   "label": "Ended On"
+  },
+  {
+   "fieldname": "device",
+   "fieldtype": "Data",
+   "label": "Device"
+  },
+  {
+   "description": "Per-session HMAC key issued to the agent. Encrypted at rest.",
+   "fieldname": "session_key",
+   "fieldtype": "Password",
+   "label": "Session Key"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-10-13 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Metactical",
+ "name": "Tracking Session",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Employee"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "user",
+ "track_changes": 1
+}

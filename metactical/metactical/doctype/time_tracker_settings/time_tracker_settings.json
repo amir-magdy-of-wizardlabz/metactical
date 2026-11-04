@@ -11,7 +11,11 @@
   "logout_delay",
   "start_date",
   "pay_cycles",
-  "clockinout_delay"
+  "clockinout_delay",
+  "tracker_section",
+  "window_minutes",
+  "max_keystrokes_per_interval",
+  "max_clicks_per_interval"
  ],
  "fields": [
   {
@@ -53,6 +57,35 @@
    "fieldname": "logout_delay",
    "fieldtype": "Int",
    "label": "Logout Delay",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "tracker_section",
+   "fieldtype": "Section Break",
+   "label": "Desktop Tracker"
+  },
+  {
+   "default": "10",
+   "description": "Minutes per capture window. Six 10-minute windows give 6 screenshots/hour.",
+   "fieldname": "window_minutes",
+   "fieldtype": "Int",
+   "label": "Window Minutes",
+   "non_negative": 1
+  },
+  {
+   "default": "600",
+   "description": "Keystrokes per interval that map to a full activity score.",
+   "fieldname": "max_keystrokes_per_interval",
+   "fieldtype": "Int",
+   "label": "Max Keystrokes / Interval",
+   "non_negative": 1
+  },
+  {
+   "default": "300",
+   "description": "Mouse clicks per interval that map to a full activity score.",
+   "fieldname": "max_clicks_per_interval",
+   "fieldtype": "Int",
+   "label": "Max Clicks / Interval",
    "non_negative": 1
   }
  ],
